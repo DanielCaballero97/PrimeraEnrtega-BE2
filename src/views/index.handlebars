@@ -1,0 +1,34 @@
+<h1>Productos</h1>
+
+<div class="container-products">
+    
+    {{#if result.payload.length}}
+    {{#each result.payload}}
+        <div class="card">
+            <h3 class="card-title">{{title}}</h3>
+            <img class="card-img" src="/img/{{img}}"/>
+            <div class="card-info">
+                <span class="card-price">$ {{price}} ARG</span>
+                <span class="card-stock">Stock: {{stock}}</span>
+            </div>
+            <div class="container-btn"> 
+                <button id="cart-{{id}}" class="btn btn-card">Agregar al carrito</button>
+            </div>
+        </div>
+
+    {{/each}}
+
+    {{else}}
+    <p>no hay productos disponibles</p>
+    {{/if}}
+
+
+
+</div>
+
+<button id="prev-button" data-page="{{result.prevLink}}" >Anterior</button>
+    <span>{{result.page}} de {{result.totalPages}}</span>
+<button id="next-button" data-page="{{result.nextLink}}">Suguiente</button>
+
+
+<script src="/js/main.js"></script>

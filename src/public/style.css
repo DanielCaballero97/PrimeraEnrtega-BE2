@@ -1,0 +1,24 @@
+.container-products{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: 10px;
+    gap: 10px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    margin: 5px;
+    padding: 5px;
+}
+
+.card-img{
+    height: 200px;
+}
+
+.btn-card{
+    border-radius: 10%;
+    border-color: black;
+    font-size: 22px;
+}
